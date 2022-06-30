@@ -1,0 +1,28 @@
+PODS:
+  - PromiseKit (6.17.1):
+    - PromiseKit/CorePromise (= 6.17.1)
+    - PromiseKit/Foundation (= 6.17.1)
+    - PromiseKit/UIKit (= 6.17.1)
+  - PromiseKit/CorePromise (6.17.1)
+  - PromiseKit/Foundation (6.17.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.17.1):
+    - PromiseKit/CorePromise
+  - Swinject (2.8.1)
+
+DEPENDENCIES:
+  - PromiseKit (~> 6.8)
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - PromiseKit
+    - Swinject
+
+SPEC CHECKSUMS:
+  PromiseKit: ee485df3d4dc570594d7e7aecae6352697dc6a4c
+  Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
+
+PODFILE CHECKSUM: 77cf802de212cbc5a4182a2782438b01b989222b
+
+COCOAPODS: 1.11.2

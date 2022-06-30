@@ -1,0 +1,6 @@
+framework module Pods_LyodsAssesment_LyodsAssesmentUITests {
+  umbrella header "Pods-LyodsAssesment-LyodsAssesmentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
