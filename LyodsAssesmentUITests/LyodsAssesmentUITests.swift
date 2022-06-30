@@ -41,11 +41,9 @@ class LyodsAssesmentUITests: XCTestCase {
             for i in stride(from: 0, to: count , by: 1) {
                 // Grab the first cell and verify that it exists and tap it
                 let tableCell = tableCells.element(boundBy: i)
-                XCTAssertTrue(tableCell.waitForExistence(timeout: 5.0), "The \(i) cell is in place on the table")
-                // Does this actually take us to the next screen
-                tableCell.tap()
-         
+                                                XCTAssertTrue(tableCell.waitForExistence(timeout: 2.0), "The \(i) cell is in place on the table")
                 if i == (count - 1) {
+                    articleTableView.swipeUp()
                     promise.fulfill()
                 }
                 // Back
