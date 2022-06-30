@@ -42,8 +42,8 @@ class LyodsAssesmentUITests: XCTestCase {
                 // Grab the first cell and verify that it exists and tap it
                 let tableCell = tableCells.element(boundBy: i)
                                                 XCTAssertTrue(tableCell.waitForExistence(timeout: 2.0), "The \(i) cell is in place on the table")
+                articleTableView.scrollToElement(element: tableCell)
                 if i == (count - 1) {
-                    articleTableView.swipeUp()
                     promise.fulfill()
                 }
                 // Back
@@ -54,5 +54,18 @@ class LyodsAssesmentUITests: XCTestCase {
         } else {
             XCTAssert(false, "Was not able to find any table cells")
         }
+    }
+}
+
+extension XCUIElement {
+    func scrollToElement(element: XCUIElement) {
+        while !element.visible() {
+            swipeUp()
+        }
+    }
+
+    func visible() -> Bool {
+        guard self.exists && !self.frame.isEmpty else { return false }
+        return XCUIApplication().windows.element(boundBy: 0).frame.contains(self.frame)
     }
 }
