@@ -15,7 +15,7 @@ final class NetworkClient {
         NetworkClient.manager = manager
     }
     
-    class func start<T: BaseCodable>(_ type: T.Type, endPoint: NetworkRequest) -> Response {
+    class func request<T: BaseCodable>(_ type: T.Type, endPoint: NetworkRequest) -> Response {
         manager.request(type, endPoint: endPoint)
     }
 }
