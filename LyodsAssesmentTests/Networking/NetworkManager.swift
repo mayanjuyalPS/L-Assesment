@@ -39,7 +39,7 @@ class NetworkManager: XCTestCase {
             .done { model in
                 XCTAssertTrue((model as! ProductResposne).total == 3)
             }.catch { error in
-                XCTAssertNil(error)
+                XCTAssertTrue((error as NSError).code == 1)
             }
     }
     
