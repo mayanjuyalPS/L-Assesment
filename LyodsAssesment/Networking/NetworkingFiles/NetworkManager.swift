@@ -10,8 +10,8 @@ import PromiseKit
 
 class NetworkManger: INetworkManager {
     
-    func request<T: BaseCodable>(_ type: T.Type, endPoint: NetworkRequest) -> Response {
-        return Promise<BaseCodable> { seal in
+    func request<T: BaseCodable>(_ type: T.Type, endPoint: INetworkRequest) -> Response {
+        return Promise { seal in
             let request = createURLRequest(using: endPoint)
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
@@ -32,7 +32,7 @@ class NetworkManger: INetworkManager {
 
 extension NetworkManger {
     
-    private func createURLRequest(using endPoint: NetworkRequest) -> URLRequest {
+    private func createURLRequest(using endPoint: INetworkRequest) -> URLRequest {
         let url = createURL(with: endPoint)
         var urlRequest = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         urlRequest.httpMethod = endPoint.method.rawValue
@@ -46,7 +46,7 @@ extension NetworkManger {
         return urlRequest
     }
     
-    private func createURL(with endPoint: NetworkRequest) -> URL {
+    private func createURL(with endPoint: INetworkRequest) -> URL {
         var components = URLComponents()
         components.scheme = "https"
         components.host = PlistReader.host

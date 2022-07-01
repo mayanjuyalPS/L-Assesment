@@ -11,5 +11,5 @@ import PromiseKit
 typealias Response = Promise<BaseCodable>
 
 protocol INetworkManager {
-    func request<T: BaseCodable>(_ type: T.Type, endPoint: NetworkRequest) -> Response
+    func request<T: BaseCodable>(_ type: T.Type, endPoint: INetworkRequest) -> Response
 }
