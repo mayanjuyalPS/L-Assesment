@@ -43,4 +43,5 @@ class UserViewModelTest: XCTestCase {
         wait(for: [promise], timeout: 10.0)
     }
 
+
 }

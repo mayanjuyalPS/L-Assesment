@@ -12,6 +12,10 @@
 		C1340CB4286D72E300627F5C /* INetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CB3286D72E300627F5C /* INetworkManager.swift */; };
 		C1340CB6286D734600627F5C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CB5286D734600627F5C /* NetworkClient.swift */; };
 		C1340CB8286D759E00627F5C /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CB7286D759E00627F5C /* NetworkAssembly.swift */; };
+		C1340CBC286EAFFB00627F5C /* ProductUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CBB286EAFFB00627F5C /* ProductUseCaseTest.swift */; };
+		C1340CBF286EB36300627F5C /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CBE286EB36300627F5C /* ProductRepository.swift */; };
+		C1340CC2286EB57300627F5C /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CC1286EB57300627F5C /* MockData.swift */; };
+		C1340CC9286EB8C200627F5C /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CC8286EB8C200627F5C /* ProductService.swift */; };
 		C1882A52286C03890073939E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882A51286C03890073939E /* AppDelegate.swift */; };
 		C1882A54286C03890073939E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882A53286C03890073939E /* SceneDelegate.swift */; };
 		C1882A59286C03890073939E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1882A57286C03890073939E /* Main.storyboard */; };
@@ -79,6 +83,10 @@
 		C1340CB3286D72E300627F5C /* INetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkManager.swift; sourceTree = "<group>"; };
 		C1340CB5286D734600627F5C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		C1340CB7286D759E00627F5C /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
+		C1340CBB286EAFFB00627F5C /* ProductUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUseCaseTest.swift; sourceTree = "<group>"; };
+		C1340CBE286EB36300627F5C /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		C1340CC1286EB57300627F5C /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		C1340CC8286EB8C200627F5C /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		C1882A4E286C03890073939E /* LyodsAssesment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyodsAssesment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1882A51286C03890073939E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1882A53286C03890073939E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +188,55 @@
 			path = NetworkingFiles;
 			sourceTree = "<group>";
 		};
+		C1340CB9286EAFBD00627F5C /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				C1882AD1286C7FB40073939E /* MockServiceTest.swift */,
+			);
+			path = MockService;
+			sourceTree = "<group>";
+		};
+		C1340CBA286EAFE200627F5C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				C1340CBB286EAFFB00627F5C /* ProductUseCaseTest.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		C1340CBD286EB32200627F5C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C1340CBE286EB36300627F5C /* ProductRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C1340CC0286EB55900627F5C /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				C1340CC1286EB57300627F5C /* MockData.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		C1340CC3286EB79000627F5C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C1340CC0286EB55900627F5C /* MockData */,
+				C1340CB9286EAFBD00627F5C /* MockService */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		C1340CC7286EB89B00627F5C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C1340CC8286EB8C200627F5C /* ProductService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C1882A45286C03890073939E = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +278,10 @@
 		C1882A67286C038D0073939E /* LyodsAssesmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				C1340CC3286EB79000627F5C /* Mock */,
+				C1340CC7286EB89B00627F5C /* Services */,
+				C1340CBD286EB32200627F5C /* Repository */,
+				C1340CBA286EAFE200627F5C /* UseCase */,
 				C1882AC9286C73140073939E /* ViewModel */,
 				C1882A68286C038D0073939E /* LyodsAssesmentTests.swift */,
 			);
@@ -422,7 +483,6 @@
 			isa = PBXGroup;
 			children = (
 				C1882ACA286C73380073939E /* UserViewModelTest.swift */,
-				C1882AD1286C7FB40073939E /* MockServiceTest.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -674,6 +734,7 @@
 				C1882A52286C03890073939E /* AppDelegate.swift in Sources */,
 				C1882AC6286C58A20073939E /* UIImageView+Extensions.swift in Sources */,
 				C1882AC8286C5BCA0073939E /* UserEndpoints.swift in Sources */,
+				C1340CC2286EB57300627F5C /* MockData.swift in Sources */,
 				C1340CB8286D759E00627F5C /* NetworkAssembly.swift in Sources */,
 				C1882AA0286C1C2B0073939E /* Users.swift in Sources */,
 				C1882A9D286C0F3A0073939E /* NetworkManager.swift in Sources */,
@@ -705,6 +766,9 @@
 			files = (
 				C1882A69286C038D0073939E /* LyodsAssesmentTests.swift in Sources */,
 				C1882ACB286C73380073939E /* UserViewModelTest.swift in Sources */,
+				C1340CBC286EAFFB00627F5C /* ProductUseCaseTest.swift in Sources */,
+				C1340CBF286EB36300627F5C /* ProductRepository.swift in Sources */,
+				C1340CC9286EB8C200627F5C /* ProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
