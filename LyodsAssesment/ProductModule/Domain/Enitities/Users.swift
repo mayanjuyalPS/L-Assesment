@@ -7,8 +7,6 @@
 
 import Foundation
 
-protocol BaseCodable: Codable {}
-
 struct ProductResponse: BaseCodable {
     let limit: Int
     let total: Int

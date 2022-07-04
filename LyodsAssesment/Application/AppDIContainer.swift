@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AppDIContainer {
+class AppContainer {
     
     lazy var networkManager: INetworkManager = {
        let networkManager = NetworkManger(requestCreator: URLRequestCreator())
