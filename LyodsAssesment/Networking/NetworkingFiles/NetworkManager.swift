@@ -10,10 +10,24 @@ import PromiseKit
 
 class NetworkManger: INetworkManager {
     
+    private let requestCreator: URLRequestCreator!
+    private let session: URLSession
+    
+    init(requestCreator: URLRequestCreator, session: URLSession = .shared) {
+        self.requestCreator = requestCreator
+        self.session = session
+    }
+    
     func request<T: BaseCodable>(_ type: T.Type, endPoint: INetworkRequest) -> Response {
         return Promise { seal in
-            let request = createURLRequest(using: endPoint)
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            var request: URLRequest!
+            do {
+                request = try requestCreator.createURLRequest(using: endPoint)
+            } catch {
+                seal.reject(error)
+                return
+            }
+            let task = session.dataTask(with: request) { data, response, error in
                 if let error = error {
                     seal.reject(error)
                 } else {
@@ -28,33 +42,4 @@ class NetworkManger: INetworkManager {
             task.resume()
         }
     }
-}
-
-extension NetworkManger {
-    
-    private func createURLRequest(using endPoint: INetworkRequest) -> URLRequest {
-        let url = createURL(with: endPoint)
-        var urlRequest = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-        urlRequest.httpMethod = endPoint.method.rawValue
-        if !endPoint.bodyParamaters.isEmpty {
-            let bodyData = try? JSONSerialization.data(withJSONObject: endPoint.bodyParamaters, options: [.prettyPrinted])
-            urlRequest.httpBody = bodyData
-        }
-        endPoint.headerParamaters.forEach({ key, value in
-            urlRequest.setValue(value, forHTTPHeaderField: key)
-        })
-        return urlRequest
-    }
-    
-    private func createURL(with endPoint: INetworkRequest) -> URL {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = PlistReader.host
-        components.path = endPoint.path
-        components.queryItems = endPoint.queryParameters.map {
-            URLQueryItem(name: $0, value: "\($1)")
-        }
-        return components.url!
-    }
-    
 }

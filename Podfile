@@ -7,7 +7,6 @@ target 'LyodsAssesment' do
   
   # Pods for LyodsAssesment
   pod "PromiseKit", "~> 6.8"
-  pod 'Swinject'
   
   target 'LyodsAssesmentTests' do
     inherit! :search_paths
