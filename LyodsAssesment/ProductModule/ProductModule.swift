@@ -42,4 +42,5 @@ class ProductModule {
         let service = ProductServiceImpl(network: networkManager)
         return service
     }
+    
 }

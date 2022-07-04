@@ -15,7 +15,7 @@ class ProductUseCaseTest: XCTestCase {
         static let kFailedErrorMeesage = "Use Case Failed Error"
     }
     
-    var useCase: IProductUseCase!
+    var useCase: ProductUseCaseImpl!
     let repository = MockRepository()
     
     override func setUpWithError() throws {

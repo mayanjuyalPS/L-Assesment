@@ -9,13 +9,13 @@ import XCTest
 
 @testable import LyodsAssesment
 
-class ProductRepository: XCTestCase {
+class ProductRepositoryTest: XCTestCase {
     
     struct ErrorMessage {
         static let kFailedErrorMeesage = "Repository Failed Error"
     }
     
-    var productRepository: IProductRepository!
+    var productRepository: ProductRepositoryImpl!
     let mockService = MockServiceTest()
     
     override func setUpWithError() throws {

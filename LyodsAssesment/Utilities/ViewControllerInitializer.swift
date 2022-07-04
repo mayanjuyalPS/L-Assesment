@@ -10,7 +10,6 @@ import UIKit
 
 enum Storyboard: String {
     case main = "Main"
-    case myWardrobe = "MyWardrobe"
 }
 
 /**

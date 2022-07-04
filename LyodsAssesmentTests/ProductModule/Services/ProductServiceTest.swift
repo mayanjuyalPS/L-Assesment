@@ -9,13 +9,13 @@ import XCTest
 
 @testable import LyodsAssesment
 
-class ProductService: XCTestCase {
+class ProductServiceTest: XCTestCase {
     
     struct ErrorMessage {
         static let kFailedErrorMeesage = "Product Failed Error"
     }
     
-    var productService: IProductService!
+    var productService: ProductServiceImpl!
     let mockNetworkManager = MockNetworkManager()
 
     override func setUpWithError() throws {

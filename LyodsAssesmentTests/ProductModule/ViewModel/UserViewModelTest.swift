@@ -6,12 +6,11 @@
 //
 
 import XCTest
-
 @testable import LyodsAssesment
 
 class UserViewModelTest: XCTestCase {
     
-    var userViewModel: IProductViewModel?
+    var userViewModel: ProductViewModelImpl?
     var useCase = MockUseCase()
     private var promise: XCTestExpectation!
     
