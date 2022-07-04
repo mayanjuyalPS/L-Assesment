@@ -15,9 +15,9 @@ class ProductServiceImpl: IProductService {
         self.network = network
     }
     
-    func makeNetworkRequest() -> Response {
+    func makeNetworkRequest() -> ProductResponse {
         let endPoint = NetworkRequest(path: ProductAPIEndpoints.productsEndPoint, method: .get)
-        let promise = network.request(ProductResponse.self, endPoint: endPoint)
+        let promise = network.request(ProductDTO.self, endPoint: endPoint)
         return promise
     }
     

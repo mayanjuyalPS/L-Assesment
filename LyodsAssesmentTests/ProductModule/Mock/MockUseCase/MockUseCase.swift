@@ -10,10 +10,10 @@ import PromiseKit
 
 class MockUseCase: IProductUseCase {
     
-    var products: ProductResponse?
+    var products: ProductDTO?
     var error: Error?
     
-    func getProducts() -> Response {
+    func getProducts() -> ProductResponse {
         return Promise { seal in
             if let error = error {
                 seal.reject(error)

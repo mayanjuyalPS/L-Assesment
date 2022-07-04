@@ -15,7 +15,7 @@ class ProductUseCaseImpl: IProductUseCase {
         self.repository = repository
     }
     
-    func getProducts() -> Response {
+    func getProducts() -> ProductResponse {
         return repository.makeServiceCallToGetProducts()
     }
 }

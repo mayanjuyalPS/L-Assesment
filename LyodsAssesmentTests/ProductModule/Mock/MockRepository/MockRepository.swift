@@ -10,10 +10,10 @@ import PromiseKit
 
 class MockRepository: IProductRepository {
     
-    var products: ProductResponse?
+    var products: ProductDTO?
     var error: Error?
     
-    func makeServiceCallToGetProducts() -> Response {
+    func makeServiceCallToGetProducts() -> ProductResponse {
         return Promise { seal in
             if let error = error {
                 seal.reject(error)

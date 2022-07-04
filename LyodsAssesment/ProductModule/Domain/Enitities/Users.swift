@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct ProductResponse: BaseCodable {
+struct ProductDTO: Codable {
     let limit: Int
     let total: Int
     let products: [Product]
 }
 
-struct Product: BaseCodable {
+struct Product: Codable {
     let title: String
     let description: String
     let price: Float

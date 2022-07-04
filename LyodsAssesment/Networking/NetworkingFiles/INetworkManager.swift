@@ -8,8 +8,9 @@
 import Foundation
 import PromiseKit
 
-typealias Response = Promise<BaseCodable>
+typealias Response<T> = Promise<T>
+typealias ProductResponse = Promise<ProductDTO>
 
 protocol INetworkManager {
-    func request<T: BaseCodable>(_ type: T.Type, endPoint: INetworkRequest) -> Response
+    func request<T: Codable>(_ type: T.Type, endPoint: INetworkRequest) -> Response<T>
 }

@@ -28,7 +28,6 @@
 		C15B82EB2872BC6E000556F5 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82EA2872BC6E000556F5 /* NetworkManagerTest.swift */; };
 		C15B82EE2872C2B7000556F5 /* IURLSessionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82ED2872C2B7000556F5 /* IURLSessionProtocols.swift */; };
 		C15B82F12872C2EC000556F5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82F02872C2EC000556F5 /* MockURLProtocol.swift */; };
-		C15B82F52872DE8C000556F5 /* BaseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82F42872DE8C000556F5 /* BaseCodable.swift */; };
 		C1882A52286C03890073939E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882A51286C03890073939E /* AppDelegate.swift */; };
 		C1882A54286C03890073939E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882A53286C03890073939E /* SceneDelegate.swift */; };
 		C1882A59286C03890073939E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1882A57286C03890073939E /* Main.storyboard */; };
@@ -104,7 +103,6 @@
 		C15B82EA2872BC6E000556F5 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		C15B82ED2872C2B7000556F5 /* IURLSessionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IURLSessionProtocols.swift; sourceTree = "<group>"; };
 		C15B82F02872C2EC000556F5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
-		C15B82F42872DE8C000556F5 /* BaseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCodable.swift; sourceTree = "<group>"; };
 		C1882A4E286C03890073939E /* LyodsAssesment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyodsAssesment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1882A51286C03890073939E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1882A53286C03890073939E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -335,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				C1882AC2286C53470073939E /* BaseTableViewCell.swift */,
-				C15B82F42872DE8C000556F5 /* BaseCodable.swift */,
 			);
 			path = BaseFiles;
 			sourceTree = "<group>";
@@ -814,7 +811,6 @@
 				C1882AC3286C53470073939E /* BaseTableViewCell.swift in Sources */,
 				C15B82DF2872AA9A000556F5 /* MockUseCase.swift in Sources */,
 				C1882A54286C03890073939E /* SceneDelegate.swift in Sources */,
-				C15B82F52872DE8C000556F5 /* BaseCodable.swift in Sources */,
 				C15B82DA2872A7F5000556F5 /* ProductViewModelOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

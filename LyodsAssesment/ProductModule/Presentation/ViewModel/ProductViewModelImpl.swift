@@ -26,11 +26,9 @@ class ProductViewModelImpl: IProductViewModel {
             }
     }
     
-    private func getData(model: BaseCodable) {
-        if let model = model as? ProductResponse {
-            products = model.products
-            outputDelegate?.success()
-        }
+    private func getData(model: ProductDTO) {
+        products = model.products
+        outputDelegate?.success()
     }
     
     init(useCase: IProductUseCase) {

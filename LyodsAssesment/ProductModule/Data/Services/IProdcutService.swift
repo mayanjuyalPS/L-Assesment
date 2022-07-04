@@ -8,5 +8,5 @@
 import Foundation
 
 protocol IProductService {
-    func makeNetworkRequest() -> Response
+    func makeNetworkRequest() -> ProductResponse
 }

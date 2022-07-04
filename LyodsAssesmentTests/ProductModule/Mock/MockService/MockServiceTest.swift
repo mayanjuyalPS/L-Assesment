@@ -10,10 +10,10 @@ import PromiseKit
 
 class MockServiceTest: IProductService {
     
-    var products: ProductResponse?
+    var products: ProductDTO?
     var error: Error?
     
-    func makeNetworkRequest() -> Response {
+    func makeNetworkRequest() -> ProductResponse {
         return Promise { seal in
             if let error = error {
                 seal.reject(error)

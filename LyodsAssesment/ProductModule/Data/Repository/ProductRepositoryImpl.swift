@@ -15,7 +15,7 @@ class ProductRepositoryImpl: IProductRepository {
         self.service = service
     }
     
-    func makeServiceCallToGetProducts() -> Response {
+    func makeServiceCallToGetProducts() -> ProductResponse {
         return service.makeNetworkRequest()
     }
     

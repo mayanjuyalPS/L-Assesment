@@ -38,14 +38,12 @@ class NetworkManagerTest: XCTestCase {
         }
         
         let endPoint = NetworkRequest(path: "/product", method: .get)
-        networkManager.request(ProductResponse.self, endPoint: endPoint)
+        networkManager.request(ProductDTO.self, endPoint: endPoint)
             .done { model in
-                if let model = model as? ProductResponse {
-                    let productCount = model.products.count
-                    if productCount >= 1 {
-                        XCTAssertTrue(model.products.first?.title == "ABC")
-                        promise.fulfill()
-                    }
+                let productCount = model.products.count
+                if productCount >= 1 {
+                    XCTAssertTrue(model.products.first?.title == "ABC")
+                    promise.fulfill()
                 }
             }.catch { error in
                 XCTFail("Error was not expected: \(error)")
@@ -59,7 +57,7 @@ class NetworkManagerTest: XCTestCase {
         let promise = expectation(description: "Should get URL Failure")
         
         let endPoint = NetworkRequest(path: "-;@,?:ą", method: .get)
-        networkManager.request(ProductResponse.self, endPoint: endPoint)
+        networkManager.request(ProductDTO.self, endPoint: endPoint)
             .catch { error in
                 XCTAssertTrue((error as NSError).domain == "URL")
                 promise.fulfill()
@@ -82,7 +80,7 @@ class NetworkManagerTest: XCTestCase {
             .done { model in
                 XCTFail("Success response was not expected.")
             }.catch { error in
-                XCTFail("Error expected: \(error)")
+                //XCTFail("Error expected: \(error)")
                 promise.fulfill()
             }
         

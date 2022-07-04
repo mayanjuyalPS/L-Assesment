@@ -18,7 +18,7 @@ class NetworkManger: INetworkManager {
         self.session = session
     }
     
-    func request<T: BaseCodable>(_ type: T.Type, endPoint: INetworkRequest) -> Response {
+    func request<T: Codable>(_ type: T.Type, endPoint: INetworkRequest) -> Response<T> {
         return Promise { seal in
             var request: URLRequest!
             do {

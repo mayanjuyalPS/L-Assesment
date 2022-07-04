@@ -8,5 +8,5 @@
 import Foundation
 
 protocol IProductRepository {
-    func makeServiceCallToGetProducts() -> Response
+    func makeServiceCallToGetProducts() -> ProductResponse
 }

@@ -32,11 +32,9 @@ class ProductService: XCTestCase {
         mockNetworkManager.products = MockData.product
         productService.makeNetworkRequest()
             .done { model in
-                if let model = model as? ProductResponse {
-                    let productCount = model.products.count
-                    if productCount >= 1 {
-                        promise.fulfill()
-                    }
+                let productCount = model.products.count
+                if productCount >= 1 {
+                    promise.fulfill()
                 }
             }
             .catch { _ in

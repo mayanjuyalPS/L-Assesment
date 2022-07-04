@@ -9,7 +9,7 @@ import Foundation
 
 struct MockData {
     
-    static let product: ProductResponse? = ProductResponse(limit: 1, total: 3,
+    static let product: ProductDTO? = ProductDTO(limit: 1, total: 3,
                                                            products: [Product(title: "ABC",
                                                                               description: "QWERRTTYY",
                                                                               price: 10,

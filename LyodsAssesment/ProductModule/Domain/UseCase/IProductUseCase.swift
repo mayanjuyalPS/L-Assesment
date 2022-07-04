@@ -8,5 +8,5 @@
 import Foundation
 
 protocol IProductUseCase {
-    func getProducts() -> Response
+    func getProducts() -> ProductResponse
 }
