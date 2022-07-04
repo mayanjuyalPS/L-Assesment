@@ -14,7 +14,7 @@ struct PlistReader {
         do {
             host = try Configuration.value(for: "API_Host") as String
         } catch(let error) {
-            print("Error :\(error)")
+            debugPrint("Error :\(error)")
         }
         return host
     }

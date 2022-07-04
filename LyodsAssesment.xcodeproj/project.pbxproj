@@ -16,7 +16,7 @@
 		C1340CC9286EB8C200627F5C /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CC8286EB8C200627F5C /* ProductService.swift */; };
 		C1340CD9286F043100627F5C /* MockServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CD8286F043100627F5C /* MockServiceTest.swift */; };
 		C1340CDC286F053B00627F5C /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1340CDB286F053B00627F5C /* MockNetworkManager.swift */; };
-		C15B82D128729E73000556F5 /* ProductDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82D028729E73000556F5 /* ProductDIContainer.swift */; };
+		C15B82D128729E73000556F5 /* ProductModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82D028729E73000556F5 /* ProductModule.swift */; };
 		C15B82D32872A49D000556F5 /* ViewControllerInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82D22872A49D000556F5 /* ViewControllerInitializer.swift */; };
 		C15B82D62872A599000556F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82D52872A599000556F5 /* Constants.swift */; };
 		C15B82D82872A5F6000556F5 /* IProdcutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B82D72872A5F6000556F5 /* IProdcutService.swift */; };
@@ -92,7 +92,7 @@
 		C1340CC8286EB8C200627F5C /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		C1340CD8286F043100627F5C /* MockServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockServiceTest.swift; sourceTree = "<group>"; };
 		C1340CDB286F053B00627F5C /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
-		C15B82D028729E73000556F5 /* ProductDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDIContainer.swift; sourceTree = "<group>"; };
+		C15B82D028729E73000556F5 /* ProductModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModule.swift; sourceTree = "<group>"; };
 		C15B82D22872A49D000556F5 /* ViewControllerInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInitializer.swift; sourceTree = "<group>"; };
 		C15B82D52872A599000556F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C15B82D72872A5F6000556F5 /* IProdcutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProdcutService.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 		C15B82CF28729BD5000556F5 /* ProductModule */ = {
 			isa = PBXGroup;
 			children = (
-				C15B82D028729E73000556F5 /* ProductDIContainer.swift */,
+				C15B82D028729E73000556F5 /* ProductModule.swift */,
 				C1882A83286C08A30073939E /* Domain */,
 				C1882A82286C08970073939E /* Data */,
 				C1882A81286C088F0073939E /* Presentation */,
@@ -789,7 +789,7 @@
 				C1882AB7286C2CF40073939E /* ProductTableViewCell.swift in Sources */,
 				C1882A52286C03890073939E /* AppDelegate.swift in Sources */,
 				C1882AC6286C58A20073939E /* UIImageView+Extensions.swift in Sources */,
-				C15B82D128729E73000556F5 /* ProductDIContainer.swift in Sources */,
+				C15B82D128729E73000556F5 /* ProductModule.swift in Sources */,
 				C15B82E32872AEC9000556F5 /* MockRepository.swift in Sources */,
 				C15B82D82872A5F6000556F5 /* IProdcutService.swift in Sources */,
 				C1340CC2286EB57300627F5C /* MockData.swift in Sources */,

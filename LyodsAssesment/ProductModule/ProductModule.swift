@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ProductDIContainer {
+class ProductModule {
     
     private let networkManager: INetworkManager
     

@@ -18,7 +18,7 @@ class ProductViewModelImpl: IProductViewModel {
     func fetchProducts() {
         useCase.getProducts()
             .done(on: .main) { [weak self] model in
-                print("Success ===> ", model)
+                debugPrint("Success ===> ", model)
                 self?.getData(model: model)
             }
             .catch(on: .main, policy: .allErrors) { [weak self] error in
